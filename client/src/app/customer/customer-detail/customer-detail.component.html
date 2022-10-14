@@ -1,0 +1,28 @@
+<div class="parent">
+    <div class="row" *ngIf="customerData">
+      <h1 >{{ customerData.name }}</h1>
+      <h5>Website: {{ customerData.website }}</h5>
+      <h5>Address: {{ customerData.address }}</h5>
+      <hr />
+      <h2 style="text-align: center;text-decoration: underline;">USERS ASSOCIATED</h2>
+      <a
+        *ngFor="let user of users"
+        style="cursor: pointer"
+        [routerLink]="['/users', user.id]"
+        class="list-group-item clearfix center"
+      >
+        <div class="d-flex justify-content-center flex-column">
+          <div class="d-flex justify-content-center flex-row">
+            <div class="p-6">
+              <h4>
+                <span class="user-name"
+                  >{{ user?.firstName }} {{ user?.lastName }}</span
+                >
+              </h4>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <br />
+  </div>

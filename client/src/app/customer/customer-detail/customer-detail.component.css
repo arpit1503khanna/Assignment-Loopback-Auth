@@ -1,0 +1,34 @@
+h1 {
+    display: inline-block;
+    color: darkslategrey;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+
+.parent {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.list-group-item {
+    border-color: rgb(208, 255, 255);
+}
+
+.list-group-item:hover {
+    background-color: rgb(234, 245, 245);
+    border-color: aliceblue;
+}
+
+.info-text {
+    font-size: smaller;
+    font-family: monospace;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.user-name {
+    font-family: monospace;
+    color: darkslategrey;
+}

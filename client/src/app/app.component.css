@@ -1,0 +1,21 @@
+.head {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.logout:hover,
+.logout:hover a {
+    background-color: rgba(230, 76, 76, 0.808);
+    border-radius: 5px;
+    color: wheat;
+}
+
+.userbtn:hover,
+.userbtn:hover a,
+.customerbtn:hover,
+.customerbtn:hover a {
+    background-color: #0d6efd;
+    border-radius: 5px;
+    color: white;
+}

@@ -1,0 +1,44 @@
+.input_tag {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.input_tag input {
+    height: 30px;
+    font-size: 1em;
+    background-color: white;
+    border-color: #cbb3b3;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.btn {
+    margin-left: 10px;
+    padding: 10px;
+    padding-bottom: 30px;
+    background-color: dodgerblue !important;
+    color: white;
+    cursor: pointer;
+}
+
+.input_tag p {
+    margin-bottom: 5px;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    color: red;
+}
+
+select {
+    height: 30px;
+    width: 130px;
+    font-size: 1em;
+    background-color: white;
+    border-color: #cbb3b3;
+    border-radius: 10px;
+    margin-top: 15px;
+}

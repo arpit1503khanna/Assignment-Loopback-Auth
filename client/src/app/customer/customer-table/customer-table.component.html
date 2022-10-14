@@ -1,0 +1,15 @@
+<app-customer-add class="cust-add" (updatedData)="onUpdatedData()"></app-customer-add>
+<table class="table_tag">
+    <tr><th *ngFor="let head of header">{{head}}</th></tr>
+    <tr *ngFor="let data of customerData">
+        <td><input type="text" name="name" [value]="data.name" disabled></td>
+        <td><input type="text" name="website" [value]="data.website" disabled></td>
+        <td><input type="text" name="address" [value]="data.address" disabled></td>
+        <td><input type="text" name="createdDate" [value]="data.createdAt | dateformat" disabled></td>
+        <td>
+            <input type="button" class="btn" (click)="saveEnable ? onSave($event,data) : onEdit($event)" value="Edit">
+            <input type="button" class="btn-danger" (click)="saveEnable ? onCancel($event) : onDelete(data)" value="Delete">
+        </td>
+        <td><a [routerLink]="['/customer/',data.id]" >Show Users</a></td>
+    </tr>
+</table>

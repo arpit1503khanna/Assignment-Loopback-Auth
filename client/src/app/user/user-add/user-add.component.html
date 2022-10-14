@@ -1,0 +1,51 @@
+<form class="input_tag" [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+    <div>
+        <input type="text" placeholder="First Name" required formControlName="firstName" />
+        <p *ngIf="!addUserForm.get('firstName')?.valid && addUserForm.get('firstName')?.touched">This field is required!</p>
+    </div>
+    <div>
+        <input type="text" placeholder="Middle Name" formControlName="middleName" />
+    </div>
+    <div>
+        <input type="text" placeholder="Last Name" required formControlName="lastName" />
+        <p *ngIf="!addUserForm.get('lastName')?.valid && addUserForm.get('lastName')?.touched">This field is required!</p>
+    </div>
+    <div>
+        <input type="email" placeholder="Email" required formControlName="email" />
+        <p *ngIf="!addUserForm.get('email')?.valid && addUserForm.get('email')?.touched">Please enter a valid email!</p>
+    </div>
+    <div>
+        <input type="text" placeholder="Username" required formControlName="username" />
+        <p *ngIf="!addUserForm.get('username')?.valid && addUserForm.get('username')?.touched">min 3 character is required!</p>
+    </div>
+    <div>
+        <input type="password" placeholder="Password" required formControlName="password" />
+        <p *ngIf="!addUserForm.get('password')?.valid && addUserForm.get('password')?.touched">min 8 character is required!</p>
+    </div>
+    <div>
+        <input type="number" placeholder="Phone Number" required formControlName="phoneNumber" />
+        <p *ngIf="!addUserForm.get('phoneNumber')?.valid && addUserForm.get('phoneNumber')?.touched">This field is required!</p>
+    </div>
+    <div>
+        <input type="text" placeholder="Address" required formControlName="address" />
+        <p *ngIf="!addUserForm.get('address')?.valid && addUserForm.get('address')?.touched">This field is required!</p>
+    </div>
+    <div>
+        <input type="text" placeholder="Role" required formControlName="rolekey" />
+        <div>
+            <p *ngIf="!addUserForm.get('rolekey')?.valid && addUserForm.get('rolekey')?.touched">Please choose from given role:</p>
+            <p *ngIf="!addUserForm.get('rolekey')?.valid && addUserForm.get('rolekey')?.touched">SuperAdmin , Admin , Subscriber</p>
+        </div>
+    </div>
+    <div>
+        <select required formControlName="customerId" >
+            <option *ngFor="let customer of customers" [value]="customer.id" >{{customer.name}}</option>
+        </select>
+        <p *ngIf="!addUserForm.get('customerId')?.valid && !addUserForm.get('customerId')?.touched" [ngStyle]="{color:!addUserForm.get('customerId')?.touched? 'black':'red'}">Choose Customer</p>
+    </div>
+    <div>
+        <input type="submit" class="btn" value="Add User"/>
+        <p *ngIf="!addUserForm?.valid && addButtonClicked">Please Enter the valid data!</p>
+    </div>
+</form>
+

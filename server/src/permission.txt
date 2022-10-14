@@ -1,0 +1,8 @@
+Permissions of Super Admin:
+    ["getUserCount", "getUsers", "updateAllUsers", "getUser", "updateUser", "replaceUser", "deleteUser", "createCustomer", "getCustomersCount", "getCustomers", "updateAllCustomers", "getCustomer", "updateCustomer", "replaceCustomer", "deleteCustomer", "createRole", "getRolesCount", "getRoles", "updateAllRoles", "updateRole", "replaceRole", "deleteRole", "getCustomerUsers", "createCustomerUser", "updateCustomerUser", "deleteCustomerUser", "getRoleUsers", "createRoleUser", "updateRoleUser", "deleteRoleUser", "getUserCustomer", "getUserRole"]
+
+Permissions of Admin:
+    ["getUserCount", "getUsers", "getUser", "updateUser", "replaceUser", "deleteUser", "getCustomersCount", "getCustomers", "getCustomer", "updateCustomer", "getRolesCount", "getRoles", "getCustomerUsers", "createCustomerUser", "updateCustomerUser", "getRoleUsers", "createRoleUser", "updateRoleUser", "getUserCustomer", "getUserRole"]
+
+Permissions of Subscriber:
+    ["getUserCount", "getUsers", "getUser", "getCustomers", "getCustomersCount", "getCustomer", "getRolesCount", "getRoles", "getCustomerUsers", "getRoleUsers", "getUserCustomer", "getUserRole"]

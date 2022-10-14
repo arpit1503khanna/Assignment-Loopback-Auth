@@ -1,0 +1,96 @@
+<div class="container-lg">
+    <h1 class="font-weight-bold text-decoration-underline">REGISTER NEW USER</h1>
+    <br>
+    <form [formGroup]="addUserForm" [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="AddUserFirstName">First Name</label>
+            <input class="form-control" id="AddUserFirstName" formControlName="firstName">
+            <div class="alert alert-danger" *ngIf="!addUserForm.get('firstName')?.valid && addUserForm.get('firstName')?.touched">
+                min 3 character is required!
+            </div>
+            <br>
+        </div>
+
+        <div class="form-group">
+            <label for="AddUserMiddleName">Middle Name</label>
+            <input class="form-control" id="AddUserMiddleName" formControlName="middleName">
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="AddUserLastName">Last Name</label>
+            <input class="form-control" id="AddUserLastName" formControlName="lastName">
+            <div class="alert alert-danger" *ngIf="!addUserForm.get('lastName')?.valid && addUserForm.get('lastName')?.touched">
+                min 3 character is required!
+            </div>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="AddUserEmail">Email address</label>
+            <input type="email" class="form-control" id="AddUserEmail" formControlName="email">
+            <div class="alert alert-danger" *ngIf="!addUserForm.get('email')?.valid && addUserForm.get('email')?.touched">
+                Please enter a valid email!
+            </div>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="AddUserName">Username</label>
+            <input class="form-control" id="AddUserName" formControlName="username">
+            <div class="alert alert-danger" *ngIf="!addUserForm.get('username')?.valid && addUserForm.get('username')?.touched">
+                min 3 character is required!
+            </div>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="AddUserPassword">Password</label>
+            <input class="form-control" type="password" id="AddUserPassword" formControlName="password">
+
+            <div class="alert alert-danger" *ngIf="!addUserForm.get('password')?.valid && addUserForm.get('password')?.touched">
+                min 8 character is required!
+            </div>
+
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="AddUserPhoneNumber">Phone Number</label>
+            <input type="number" class="form-control" id="AddUserPhoneNumber" formControlName="phoneNumber">
+            <div class="alert alert-danger" *ngIf="!addUserForm.get('phoneNumber')?.valid && addUserForm.get('phoneNumber')?.touched">
+                This field is required!
+            </div>
+            <br>
+
+        </div>
+        <div class="form-group">
+            <label for="AddUserRole">Role</label>
+            <select class="form-control" id="AddUserRole" formControlName="rolekey">
+                <option *ngFor="let role of Roles" [value]="role.key">{{role.role}}</option>
+            </select>
+            <div class="alert alert-danger" *ngIf="!addUserForm.get('customerId')?.valid && addUserForm.get('customerId')?.touched">
+                This field is required!
+            </div>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="AddUserAddress">Address</label>
+            <input class="form-control" id="AddUserAddress" formControlName="address">
+            <div class="alert alert-danger" *ngIf="!addUserForm.get('address')?.valid && addUserForm.get('address')?.touched">
+                This field is required!
+            </div>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="AddUserCustomerId">Customer Id</label>
+            <select class="form-control" id="AddUserCustomerId" formControlName="customerId">
+                <option *ngFor="let customer of customers" [value]="customer.id" >{{customer.name}}</option>
+            </select>
+            <div class="alert alert-danger" *ngIf="!addUserForm.get('customerId')?.valid && addUserForm.get('customerId')?.touched">
+                This field is required!
+            </div>
+            <br>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!addUserForm.valid">Submit</button>
+    </form>
+
+    <a routerLink="">Login Instead?</a>
+
+</div>

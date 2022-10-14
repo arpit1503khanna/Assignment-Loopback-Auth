@@ -1,0 +1,18 @@
+<table class="table_tag">
+    <tr><th *ngFor="let head of header">{{head}}</th></tr>
+    <tr *ngFor="let data of userData">
+        <td><input type="text" name="firstName" [value]="data.firstName" disabled></td>
+        <td><input type="text" name="middleName" [value]="data.middleName" disabled></td>
+        <td><input type="text" name="lastName" [value]="data.lastName" disabled></td>
+        <td><input type="email" name="email" [value]="data.email" disabled></td>
+        <td><input type="number" name="phoneNumber" [value]="data.phoneNumber" disabled></td>
+        <td><input type="text" name="address" [value]="data.address" disabled></td>
+        <td><input type="text" name="role" [value]="data.Role.role" disabled></td>
+        <td><input type="text" name="customer" [value]="data.customer.name" disabled></td>
+        <td><input type="text" name="createdDate" [value]="data.createdAt | dateformat" disabled></td>
+        <td>
+            <input type="button" class="btn" (click)="saveEnable ? onSave($event,data) : onEdit($event)" value="Edit">
+            <input type="button" class="btn-danger" (click)="saveEnable ? onCancel($event) : onDelete(data)" value="Delete">
+        </td>
+    </tr>
+</table>
